@@ -1,0 +1,10 @@
+task generateFile {
+    dependsOn('deleteFile')
+    finalizedBy('finalizazator')
+    doLast {
+        File theFile = new File('theFile.txt')
+        
+        println 'Executing generateFile task...'
+        theFile.write('File written by the gradle task ')
+    }
+}

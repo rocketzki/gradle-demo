@@ -1,0 +1,12 @@
+task deleteFile {
+    doFirst {
+        println 'Executing deleteFile task...'
+
+        File theFile = new File('theFile.txt')
+
+        if (theFile.exists()) {
+            println 'The file exists - deleting file...'
+            theFile.delete()
+        }
+    }
+}

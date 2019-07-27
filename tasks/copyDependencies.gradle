@@ -1,0 +1,4 @@
+task copyDependencies(type: Copy) {
+    from configurations.compile
+    into 'dependencies'
+}
